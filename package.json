@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Mr.Ye blog",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:xspiritx/blog.git"
+  },
+  "author": "Mr.Ye",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^0.13.1"
+  }
+}
