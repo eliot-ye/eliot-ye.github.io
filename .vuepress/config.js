@@ -12,10 +12,9 @@ module.exports = {
 		lastUpdated: '最近更新',
 		repo: 'https://gitee.com/xspiritx/blog/',
 		repoLabel: '去评论',
-		nav: [{
-			text: '2018',
-			link: '/2018/08-02'
-		}, ],
+		nav: [
+			{text: '2018', link: '/2018/08-02'}, 
+		],
 		sidebar: {
 			'/2018/': ['08-02', '08-03', '08-05', '08-08']
 		}
