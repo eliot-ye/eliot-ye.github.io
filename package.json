@@ -4,7 +4,7 @@
   "description": "Mr.Ye blog",
   "main": "index.html",
   "scripts": {
-    "dev": "vuepress dev",
+    "start": "vuepress dev",
     "build": "vuepress build"
   },
   "repository": {
