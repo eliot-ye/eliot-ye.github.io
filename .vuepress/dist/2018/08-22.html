@@ -7,8 +7,8 @@
     <meta name="description" content="Mr.Ye blog">
     
     
-    <link rel="preload" href="/blog/assets/css/0.styles.51f87dfa.css" as="style"><link rel="preload" href="/blog/assets/js/app.5166e7bc.js" as="script"><link rel="preload" href="/blog/assets/js/8.b44af836.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.339eb68f.js"><link rel="prefetch" href="/blog/assets/js/11.1bc43afb.js"><link rel="prefetch" href="/blog/assets/js/12.57af63fb.js"><link rel="prefetch" href="/blog/assets/js/13.012a6ba7.js"><link rel="prefetch" href="/blog/assets/js/14.814a39a0.js"><link rel="prefetch" href="/blog/assets/js/15.9f286d5f.js"><link rel="prefetch" href="/blog/assets/js/2.e711909d.js"><link rel="prefetch" href="/blog/assets/js/3.20f3e153.js"><link rel="prefetch" href="/blog/assets/js/4.d645b2c1.js"><link rel="prefetch" href="/blog/assets/js/5.3121a138.js"><link rel="prefetch" href="/blog/assets/js/6.badaa750.js"><link rel="prefetch" href="/blog/assets/js/7.ec46f0cc.js"><link rel="prefetch" href="/blog/assets/js/9.bfec31f8.js">
-    <link rel="stylesheet" href="/blog/assets/css/0.styles.51f87dfa.css">
+    <link rel="preload" href="/blog/assets/css/0.styles.5a9f4582.css" as="style"><link rel="preload" href="/blog/assets/js/app.738e67d4.js" as="script"><link rel="preload" href="/blog/assets/js/8.c60078be.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.3faca917.js"><link rel="prefetch" href="/blog/assets/js/11.c25c0df7.js"><link rel="prefetch" href="/blog/assets/js/12.7fb70632.js"><link rel="prefetch" href="/blog/assets/js/13.8e7292b4.js"><link rel="prefetch" href="/blog/assets/js/14.bdeb6c29.js"><link rel="prefetch" href="/blog/assets/js/15.a377047c.js"><link rel="prefetch" href="/blog/assets/js/2.c95fe344.js"><link rel="prefetch" href="/blog/assets/js/3.af5c00c6.js"><link rel="prefetch" href="/blog/assets/js/4.d0cb940e.js"><link rel="prefetch" href="/blog/assets/js/5.8b87d1d7.js"><link rel="prefetch" href="/blog/assets/js/6.ea2d19e2.js"><link rel="prefetch" href="/blog/assets/js/7.e09793f6.js"><link rel="prefetch" href="/blog/assets/js/9.bccf600a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.5a9f4582.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Mr.Ye</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/2018/08-02.html" class="nav-link">2018</a></div><div class="nav-item"><a href="/blog/2019/04-09.html" class="nav-link">2019</a></div> <a href="https://gitee.com/xspiritx/blog/" target="_blank" rel="noopener noreferrer" class="repo-link">
@@ -37,31 +37,31 @@
 <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
 <span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
 </code></pre></div><h2 id="yarn"><a href="#yarn" aria-hidden="true" class="header-anchor">#</a> yarn</h2> <p>yarn安装后有可能出现不能识别全局模块的情况，是因为没有添加环境变量，解决方法是运行<code>yarn global bin</code>，并把输出的地址添加到环境变量中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看全局安装的模块</span>
-yarn global list
+<span class="token function">yarn</span> global list
 
 <span class="token comment"># 更新全局模块</span>
-yarn global upgrade <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span> --latest
+<span class="token function">yarn</span> global upgrade <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span> --latest
 
 <span class="token comment"># 在执行升级操作之前，此命令将显示已过期的包列表，并允许用户选择相应的想要升级的包。</span>
-yarn upgrade-interactive
+<span class="token function">yarn</span> upgrade-interactive
 
 <span class="token comment"># 验证当前项目 package.json 里的依赖版本和 yarn 的 lock 文件是否匹配。</span>
-yarn check
+<span class="token function">yarn</span> check
 
 <span class="token comment"># 验证当前项目 package.json 里包内容的版本和 hash 值是否与 yarn 的 lock 文件一致。 这有助于验证包依赖没有更改。</span>
-yarn check --integrity
+<span class="token function">yarn</span> check --integrity
 
 <span class="token comment"># 卸载全局模块</span>
-yarn global remove <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span>
+<span class="token function">yarn</span> global remove <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span>
 
 <span class="token comment"># 查看仓库地址：https://registry.yarnpkg.com</span>
-yarn config get registry
+<span class="token function">yarn</span> config get registry
 
 <span class="token comment"># 设置全局的仓库地址</span>
-yarn config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
+<span class="token function">yarn</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
 
 <span class="token comment"># 使用特定仓库地址下载当前依赖</span>
-yarn add <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+<span class="token function">yarn</span> <span class="token function">add</span> <span class="token operator">&lt;</span>module-name<span class="token operator">&gt;</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org
 </code></pre></div><div class="warning custom-block"><p class="custom-block-title">注意</p> <ul><li>使用yarn安装全局模块后，如果模块的cli命令不能用，需要配置环境变量</li> <li>更新全局模块时，必须加上<code>--latest</code>后缀，否则不更新</li></ul></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新: </span> <span class="time">2018-12-5 11:23:44</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/blog/2018/08-21.html" class="prev">
@@ -71,6 +71,6 @@ yarn add <span class="token operator">&lt;</span>module-name<span class="token o
         </a>
         →
       </span></p></div> </div> <!----></div></div>
-    <script src="/blog/assets/js/8.b44af836.js" defer></script><script src="/blog/assets/js/app.5166e7bc.js" defer></script>
+    <script src="/blog/assets/js/app.738e67d4.js" defer></script><script src="/blog/assets/js/8.c60078be.js" defer></script>
   </body>
 </html>
