@@ -7,6 +7,7 @@ module.exports = {
       description: 'Mr.Ye blog'
     }
   },
+  shouldPrefetch: () => false,
   themeConfig: {
     lastUpdated: '最近更新',
     repo: 'https://gitee.com/xspiritx/blog/',

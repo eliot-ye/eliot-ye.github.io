@@ -1,0 +1,13 @@
+$scrollbarW = 6px
+$scrollbarColor = rgba(69, 90, 100, 0.2)
+
+::-webkit-scrollbar-thumb
+  border-radius $scrollbarW
+  background-color $scrollbarColor
+::-webkit-scrollbar
+  width $scrollbarW
+  background-color transparent
+.sidebar::-webkit-scrollbar-thumb
+  background-color transparent
+.sidebar:hover::-webkit-scrollbar-thumb
+  background-color $scrollbarColor
