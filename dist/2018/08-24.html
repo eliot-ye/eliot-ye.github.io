@@ -7,7 +7,7 @@
     <meta name="description" content="Mr.Ye blog">
     
     
-    <link rel="preload" href="/blog/assets/css/0.styles.00392df3.css" as="style"><link rel="preload" href="/blog/assets/js/app.e0e28d6b.js" as="script"><link rel="preload" href="/blog/assets/js/10.3faca917.js" as="script">
+    <link rel="preload" href="/blog/assets/css/0.styles.00392df3.css" as="style"><link rel="preload" href="/blog/assets/js/app.24a3b30b.js" as="script"><link rel="preload" href="/blog/assets/js/10.394bd182.js" as="script">
     <link rel="stylesheet" href="/blog/assets/css/0.styles.00392df3.css">
   </head>
   <body>
@@ -19,7 +19,7 @@
 console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>theDate<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre></div><p>正常来说，以上代码应该输出<code>Fri Aug 24 2018 08:00:00 GMT+0800 (中国标准时间)</code>;</p> <p><code>windows</code>上的所有浏览器都这样，没问题，但ios上，会报错</p> <p>解决方案：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> theDate <span class="token operator">=</span> <span class="token template-string"><span class="token string">`2018-08-24`</span></span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>theDate<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/\-/g</span><span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre></div><p>这样就没问题了</p> <h2 id="position-fixed"><a href="#position-fixed" aria-hidden="true" class="header-anchor">#</a> position: fixed</h2> <p>这个坑应该是非常有名的了，目前我所知的有两点：</p> <ul><li>用了<code>position: fixed</code>的元素会随着屏幕的滚动而滚动</li> <li>在文本框唤出键盘后，用了<code>position: fixed</code>的元素表现会类似<code>position: absolute</code></li></ul> <p>目前还没有很好的办法能解决第二点，公认的方法是不用<code>position: fixed</code>，转而在外层包上一个用了<code>overflow-y:auto;-webkit-overflow-scrolling: touch;</code>的<code>div</code></p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>在所有<code>webkit</code>内核的浏览器中，用了<code>overflow-y:auto</code>都建议和<code>-webkit-overflow-scrolling: touch</code>一起使用，可以滑动更顺畅</p></div> <h2 id="z-index-和-transform-translate-一起用时，z-index-会失效"><a href="#z-index-和-transform-translate-一起用时，z-index-会失效" aria-hidden="true" class="header-anchor">#</a> z-index 和 transform:translate() 一起用时，z-index 会失效</h2> <p>当同一个元素上同时用上 <code>z-index</code> 和 <code>translate</code> 时，在 ios 上 <code>z-index</code> 会失效，其他浏览器表现正常</p> <p>解决方案：</p> <p>使用 <code>translate3D</code>，并在 z轴上加上一个足够大的数</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新: </span> <span class="time">2019-3-29 10:01:42</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>这样就没问题了</p> <h2 id="position-fixed"><a href="#position-fixed" aria-hidden="true" class="header-anchor">#</a> position: fixed</h2> <p>这个坑应该是非常有名的了，目前我所知的有两点：</p> <ul><li>用了<code>position: fixed</code>的元素会随着屏幕的滚动而滚动</li> <li>在文本框唤出键盘后，用了<code>position: fixed</code>的元素表现会类似<code>position: absolute</code></li></ul> <p>目前还没有很好的办法能解决第二点，公认的方法是不用<code>position: fixed</code>，转而在外层包上一个用了<code>overflow-y:auto;-webkit-overflow-scrolling: touch;</code>的<code>div</code></p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>在所有<code>webkit</code>内核的浏览器中，用了<code>overflow-y:auto</code>都建议和<code>-webkit-overflow-scrolling: touch</code>一起使用，可以滑动更顺畅</p></div> <h2 id="z-index-和-transform-translate-一起用时，z-index-会失效"><a href="#z-index-和-transform-translate-一起用时，z-index-会失效" aria-hidden="true" class="header-anchor">#</a> z-index 和 transform:translate() 一起用时，z-index 会失效</h2> <p>当同一个元素上同时用上 <code>z-index</code> 和 <code>translate</code> 时，在 ios 上 <code>z-index</code> 会失效，其他浏览器表现正常</p> <p>解决方案：</p> <p>使用 <code>translate3D</code>，并在 z轴上加上一个足够大的数</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/blog/2018/08-22.html" class="prev">
           包管理工具
@@ -28,6 +28,6 @@ console<span class="token punctuation">.</span><span class="token function">info
         </a>
         →
       </span></p></div> </div> <!----></div></div>
-    <script src="/blog/assets/js/app.e0e28d6b.js" defer></script><script src="/blog/assets/js/10.3faca917.js" defer></script>
+    <script src="/blog/assets/js/app.24a3b30b.js" defer></script><script src="/blog/assets/js/10.394bd182.js" defer></script>
   </body>
 </html>
