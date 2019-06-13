@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js插件封装 | Eliot&#39;s blog</title>
+    <meta name="description" content="Eliot&#39;s blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.aaca263c.css" as="style"><link rel="preload" href="/assets/js/app.808c56f4.js" as="script"><link rel="preload" href="/assets/js/7.1b49ee7e.js" as="script"><link rel="preload" href="/assets/js/14.657298e1.js" as="script"><link rel="prefetch" href="/assets/js/10.3493d7c5.js"><link rel="prefetch" href="/assets/js/11.cf11d2de.js"><link rel="prefetch" href="/assets/js/12.47720901.js"><link rel="prefetch" href="/assets/js/13.f15ccc88.js"><link rel="prefetch" href="/assets/js/15.27929c0e.js"><link rel="prefetch" href="/assets/js/16.dd09ea34.js"><link rel="prefetch" href="/assets/js/17.934efdcb.js"><link rel="prefetch" href="/assets/js/18.4fa1d6ac.js"><link rel="prefetch" href="/assets/js/19.fc54bb5b.js"><link rel="prefetch" href="/assets/js/2.8c2670f4.js"><link rel="prefetch" href="/assets/js/20.6c7d2dfd.js"><link rel="prefetch" href="/assets/js/3.0bf30da7.js"><link rel="prefetch" href="/assets/js/4.46b6c562.js"><link rel="prefetch" href="/assets/js/5.abf44182.js"><link rel="prefetch" href="/assets/js/6.3c67f4b0.js"><link rel="prefetch" href="/assets/js/8.c1f3f1ea.js"><link rel="prefetch" href="/assets/js/9.5af0ad66.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aaca263c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><header class="navbar"><span class="site-title">Eliot's blog</span> <div class="links"><nav><div class="nav-item"><a href="/" class="router-link-active">技术</a></div> <div class="nav-item"><a href="/tag/">Tags</a></div> <div class="nav-item"><a href="/poetry/2018/11/19/诗词/">诗词</a></div></nav></div></header> <div class="theme-blog-content"><div class="content__default"><h1 id="js插件封装"><a href="#js插件封装" aria-hidden="true" class="header-anchor">#</a> js插件封装</h1> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">global</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">global<span class="token punctuation">,</span> factory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">typeof</span> exports <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> module <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">?</span> module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
+  <span class="token keyword">typeof</span> define <span class="token operator">===</span> <span class="token string">'function'</span> <span class="token operator">&amp;&amp;</span> define<span class="token punctuation">.</span>amd <span class="token operator">?</span> <span class="token function">define</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span> <span class="token punctuation">:</span>
+  <span class="token punctuation">(</span>global<span class="token punctuation">[</span><span class="token string">'plugin-name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.808c56f4.js" defer></script><script src="/assets/js/7.1b49ee7e.js" defer></script><script src="/assets/js/14.657298e1.js" defer></script>
+  </body>
+</html>

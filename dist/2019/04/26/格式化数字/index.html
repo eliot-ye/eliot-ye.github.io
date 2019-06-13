@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>格式化数字 | Eliot&#39;s blog</title>
+    <meta name="description" content="Eliot&#39;s blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.aaca263c.css" as="style"><link rel="preload" href="/assets/js/app.808c56f4.js" as="script"><link rel="preload" href="/assets/js/7.1b49ee7e.js" as="script"><link rel="preload" href="/assets/js/18.4fa1d6ac.js" as="script"><link rel="prefetch" href="/assets/js/10.3493d7c5.js"><link rel="prefetch" href="/assets/js/11.cf11d2de.js"><link rel="prefetch" href="/assets/js/12.47720901.js"><link rel="prefetch" href="/assets/js/13.f15ccc88.js"><link rel="prefetch" href="/assets/js/14.657298e1.js"><link rel="prefetch" href="/assets/js/15.27929c0e.js"><link rel="prefetch" href="/assets/js/16.dd09ea34.js"><link rel="prefetch" href="/assets/js/17.934efdcb.js"><link rel="prefetch" href="/assets/js/19.fc54bb5b.js"><link rel="prefetch" href="/assets/js/2.8c2670f4.js"><link rel="prefetch" href="/assets/js/20.6c7d2dfd.js"><link rel="prefetch" href="/assets/js/3.0bf30da7.js"><link rel="prefetch" href="/assets/js/4.46b6c562.js"><link rel="prefetch" href="/assets/js/5.abf44182.js"><link rel="prefetch" href="/assets/js/6.3c67f4b0.js"><link rel="prefetch" href="/assets/js/8.c1f3f1ea.js"><link rel="prefetch" href="/assets/js/9.5af0ad66.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aaca263c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><header class="navbar"><span class="site-title">Eliot's blog</span> <div class="links"><nav><div class="nav-item"><a href="/" class="router-link-active">技术</a></div> <div class="nav-item"><a href="/tag/">Tags</a></div> <div class="nav-item"><a href="/poetry/2018/11/19/诗词/">诗词</a></div></nav></div></header> <div class="theme-blog-content"><div class="content__default"><h1 id="格式化数字"><a href="#格式化数字" aria-hidden="true" class="header-anchor">#</a> 格式化数字</h1> <h2 id="从右到左，每三位数加上"><a href="#从右到左，每三位数加上" aria-hidden="true" class="header-anchor">#</a> 从右到左，每三位数加上 <code>&quot;,&quot;</code></h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\d)(?=(?:\d{3})+$)/g</span><span class="token punctuation">,</span> <span class="token string">&quot;$1,&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">set</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/,/g</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="从左到右，每四位数加上"><a href="#从左到右，每四位数加上" aria-hidden="true" class="header-anchor">#</a> 从左到右，每四位数加上 <code>&quot; - &quot;</code></h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\w{4})(?=\w)/g</span><span class="token punctuation">,</span> <span class="token string">&quot;$1 - &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">set</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">&quot; - &quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="四舍五入保留小数"><a href="#四舍五入保留小数" aria-hidden="true" class="header-anchor">#</a> 四舍五入保留小数</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 正确四舍五入，并保留小数
+ * @param {number} theNumber - 要格式化的数字（小数）
+ * @param {number} fractionDigits - 分数位数，即要保留的小数位数，如不足，补 0
+ */</span>
+<span class="token keyword">function</span> <span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token parameter">theNumber<span class="token punctuation">,</span>fractionDigits</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> times <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> fractionDigits<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> roundNum <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>theNumber <span class="token operator">*</span> times<span class="token punctuation">)</span> <span class="token operator">/</span> times<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> roundNum<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span>fractionDigits<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.808c56f4.js" defer></script><script src="/assets/js/7.1b49ee7e.js" defer></script><script src="/assets/js/18.4fa1d6ac.js" defer></script>
+  </body>
+</html>

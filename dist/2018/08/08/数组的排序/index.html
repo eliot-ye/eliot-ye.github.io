@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数组的排序 | Eliot&#39;s blog</title>
+    <meta name="description" content="Eliot&#39;s blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.aaca263c.css" as="style"><link rel="preload" href="/assets/js/app.808c56f4.js" as="script"><link rel="preload" href="/assets/js/7.1b49ee7e.js" as="script"><link rel="preload" href="/assets/js/11.cf11d2de.js" as="script"><link rel="prefetch" href="/assets/js/10.3493d7c5.js"><link rel="prefetch" href="/assets/js/12.47720901.js"><link rel="prefetch" href="/assets/js/13.f15ccc88.js"><link rel="prefetch" href="/assets/js/14.657298e1.js"><link rel="prefetch" href="/assets/js/15.27929c0e.js"><link rel="prefetch" href="/assets/js/16.dd09ea34.js"><link rel="prefetch" href="/assets/js/17.934efdcb.js"><link rel="prefetch" href="/assets/js/18.4fa1d6ac.js"><link rel="prefetch" href="/assets/js/19.fc54bb5b.js"><link rel="prefetch" href="/assets/js/2.8c2670f4.js"><link rel="prefetch" href="/assets/js/20.6c7d2dfd.js"><link rel="prefetch" href="/assets/js/3.0bf30da7.js"><link rel="prefetch" href="/assets/js/4.46b6c562.js"><link rel="prefetch" href="/assets/js/5.abf44182.js"><link rel="prefetch" href="/assets/js/6.3c67f4b0.js"><link rel="prefetch" href="/assets/js/8.c1f3f1ea.js"><link rel="prefetch" href="/assets/js/9.5af0ad66.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aaca263c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><header class="navbar"><span class="site-title">Eliot's blog</span> <div class="links"><nav><div class="nav-item"><a href="/" class="router-link-active">技术</a></div> <div class="nav-item"><a href="/tag/">Tags</a></div> <div class="nav-item"><a href="/poetry/2018/11/19/诗词/">诗词</a></div></nav></div></header> <div class="theme-blog-content"><div class="content__default"><h1 id="数组的排序"><a href="#数组的排序" aria-hidden="true" class="header-anchor">#</a> 数组的排序</h1> <p>网上流传了很多数据的排序方法，大多数都是冒泡排序之类，这里要说的是一个原生的方法</p> <h2 id="浏览器支持"><a href="#浏览器支持" aria-hidden="true" class="header-anchor">#</a> 浏览器支持</h2> <p>所有主要浏览器都支持sort()。</p> <h2 id="定义和用法"><a href="#定义和用法" aria-hidden="true" class="header-anchor">#</a> 定义和用法</h2> <p>sort() 方法用于对数组的元素进行排序。</p> <p>排序顺序可以是字母或数字，并按升序或降序。</p> <p>默认排序顺序为按字母升序。</p> <div class="warning custom-block"><p class="custom-block-title">注意</p> <p>当数字是按字母顺序排列时&quot;40&quot;将排在&quot;5&quot;前面。</p> <p>使用数字排序，你必须通过一个函数作为参数来调用。</p> <p>函数指定数字是按照升序还是降序排列。</p></div> <h2 id="语法"><a href="#语法" aria-hidden="true" class="header-anchor">#</a> 语法</h2> <div class="language-js extra-class"><pre class="language-js"><code>array<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>sortfunction<span class="token punctuation">)</span>
+</code></pre></div><div class="danger custom-block"><p class="custom-block-title">注意</p> <p>这种方法会改变原始数组！</p></div> <h3 id="数字元素的排列"><a href="#数字元素的排列" aria-hidden="true" class="header-anchor">#</a> 数字元素的排列</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+points<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a<span class="token operator">-</span>b
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+
+<span class="token comment">// 输出： [1,5,10,25,40,100}]</span>
+</code></pre></div><h3 id="对象元素的排列"><a href="#对象元素的排列" aria-hidden="true" class="header-anchor">#</a> 对象元素的排列</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">25</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+points<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a<span class="token punctuation">.</span>a<span class="token operator">-</span>b<span class="token punctuation">.</span>a
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+
+<span class="token comment">// 输出： [{a:1},{a:5},{a:10},{a:25},{a:40},{a:100}]</span>
+</code></pre></div><h3 id="对象元素的排列（降序）"><a href="#对象元素的排列（降序）" aria-hidden="true" class="header-anchor">#</a> 对象元素的排列（降序）</h3> <p>回调函数中有两个参数：a、b</p> <p><code>a-b</code>为升序</p> <p><code>b-a</code>为降序</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token number">60</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+points<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'---'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> b<span class="token punctuation">.</span>a<span class="token operator">-</span>a<span class="token punctuation">.</span>a
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span>
+
+<span class="token comment">/** 输出：
+ * {a: 40}
+ * {a: 100}
+ * ---
+ * {a: 40}
+ * {a: 60}
+ * ---
+ * {a: 100}
+ * {a: 60}
+ * ---
+ * [{a:100},{a:60},{a:40}]
+ */</span>
+</code></pre></div></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.808c56f4.js" defer></script><script src="/assets/js/7.1b49ee7e.js" defer></script><script src="/assets/js/11.cf11d2de.js" defer></script>
+  </body>
+</html>

@@ -1,19 +1,20 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "Mr.Ye blog",
-  "main": "index.html",
+  "name": "blog-theme",
+  "version": "0.0.1",
+  "description": "blog-theme",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-blog": "^1.0.0",
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
+    "vuepress": "^1.0.1",
+    "vuepress-plugin-container": "^2.0.1"
+  },
   "scripts": {
     "start": "vuepress dev src",
     "build": "vuepress build src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@gitee.com:xspiritx/blog.git"
-  },
-  "author": "Mr.Ye",
-  "license": "ISC",
-  "dependencies": {
-    "vuepress": "^0.14.11"
-  }
+  "author": "",
+  "license": "ISC"
 }

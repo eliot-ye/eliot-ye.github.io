@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js 防抖动功能 | Eliot&#39;s blog</title>
+    <meta name="description" content="Eliot&#39;s blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.aaca263c.css" as="style"><link rel="preload" href="/assets/js/app.808c56f4.js" as="script"><link rel="preload" href="/assets/js/7.1b49ee7e.js" as="script"><link rel="preload" href="/assets/js/19.fc54bb5b.js" as="script"><link rel="prefetch" href="/assets/js/10.3493d7c5.js"><link rel="prefetch" href="/assets/js/11.cf11d2de.js"><link rel="prefetch" href="/assets/js/12.47720901.js"><link rel="prefetch" href="/assets/js/13.f15ccc88.js"><link rel="prefetch" href="/assets/js/14.657298e1.js"><link rel="prefetch" href="/assets/js/15.27929c0e.js"><link rel="prefetch" href="/assets/js/16.dd09ea34.js"><link rel="prefetch" href="/assets/js/17.934efdcb.js"><link rel="prefetch" href="/assets/js/18.4fa1d6ac.js"><link rel="prefetch" href="/assets/js/2.8c2670f4.js"><link rel="prefetch" href="/assets/js/20.6c7d2dfd.js"><link rel="prefetch" href="/assets/js/3.0bf30da7.js"><link rel="prefetch" href="/assets/js/4.46b6c562.js"><link rel="prefetch" href="/assets/js/5.abf44182.js"><link rel="prefetch" href="/assets/js/6.3c67f4b0.js"><link rel="prefetch" href="/assets/js/8.c1f3f1ea.js"><link rel="prefetch" href="/assets/js/9.5af0ad66.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aaca263c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><header class="navbar"><span class="site-title">Eliot's blog</span> <div class="links"><nav><div class="nav-item"><a href="/" class="router-link-active">技术</a></div> <div class="nav-item"><a href="/tag/">Tags</a></div> <div class="nav-item"><a href="/poetry/2018/11/19/诗词/">诗词</a></div></nav></div></header> <div class="theme-blog-content"><div class="content__default"><h1 id="js-防抖动功能"><a href="#js-防抖动功能" aria-hidden="true" class="header-anchor">#</a> js 防抖动功能</h1> <h2 id="原理"><a href="#原理" aria-hidden="true" class="header-anchor">#</a> 原理</h2> <p>利用 <code>setTimeOut</code> 实现规定时间内不可多次执行</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** 防抖设置开关标记 */</span>
+<span class="token keyword">let</span> theTimeOut <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">handle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>theTimeOut<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>theTimeOut<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  theTimeOut <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    theTimeOut <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// do some thing here</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="封装实现"><a href="#封装实现" aria-hidden="true" class="header-anchor">#</a> 封装实现</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 防抖功能
+ * @param {number} [time=500] - 防抖动的时间，单位：毫秒，默认：500ms
+ * @example
+ * const AntiShakeObj = new AntiShake();
+ * function doSomeThing(){
+ *   AntiShakeObj.handle(()=&gt;{
+ *     console.log(&quot;only one&quot;)
+ *     // do some thing here
+ *   })
+ * }
+ * doSomeThing()
+ * doSomeThing()
+ * doSomeThing()
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AntiShake</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * @private
+   * @type {NodeJS.Timeout}
+   */</span>
+  theTimeOut <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">time <span class="token operator">=</span> <span class="token number">500</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/** @private */</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>time <span class="token operator">=</span> time<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+   * @public
+   * @param {Function} callback - 要做防抖处理的执行动作
+   */</span>
+  <span class="token function">handle</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>theTimeOut<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>theTimeOut<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>theTimeOut <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>theTimeOut <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.808c56f4.js" defer></script><script src="/assets/js/7.1b49ee7e.js" defer></script><script src="/assets/js/19.fc54bb5b.js" defer></script>
+  </body>
+</html>
