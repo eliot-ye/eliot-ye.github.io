@@ -1,5 +1,5 @@
 <template>
-<div id="BlogContent">
+<div id="BlogContent" :class="{'hasHeaders':$page.headers}">
   <div class="theme-blog-content">
     <Content/>
     <Outline/>
@@ -26,7 +26,7 @@ export default {
 <style lang="stylus">
 @import '../styles/config'
 
-#BlogContent
+#BlogContent.hasHeaders
   padding-right $sidebarWidth * 0.8
 #BlogContent-footer
   padding-top 50px

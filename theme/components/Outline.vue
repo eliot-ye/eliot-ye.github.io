@@ -1,5 +1,5 @@
 <template>
-  <div id="Outline">
+  <div id="Outline" v-if="headers">
     <h4 class="Outline-title">目录</h4>
     <ul class="sidebar">
       <router-link v-for="(item, i) in headers" :to="`#${item.slug}`" class="sidebar-link">
