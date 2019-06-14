@@ -4,13 +4,10 @@
     <div class="links">
       <nav>
         <div class="nav-item">
-          <router-link :class="{'router-active': id === 'technology'}" to="/">技术</router-link>
-        </div>
-        <div class="nav-item">
           <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
         </div>
-        <div class="nav-item">
-          <router-link :class="{'router-active': id === 'poetry'}" to="/poetry/2018/11/19/诗词/">诗词</router-link>
+        <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i">
+          <router-link :class="{'router-active': id === navbar.id}" :to="navbar.path">{{navbar.title}}</router-link>
         </div>
       </nav>
     </div>
@@ -26,6 +23,9 @@ export default {
     },
     path() {
       return this.$route.path;
+    },
+    navbarList(){
+      return this.$themeConfig.navbar
     }
   }
 };
