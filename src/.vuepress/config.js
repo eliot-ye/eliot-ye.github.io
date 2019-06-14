@@ -4,5 +4,8 @@ module.exports = {
   title: "Eliot's blog",
   description: "Eliot's blog",
   locales: { "/": { lang: 'zh-CN' } },
-  dest:"dist"
+  dest:"dist",
+  themeConfig: {
+    portrait:""
+  }
 }

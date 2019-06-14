@@ -20,30 +20,10 @@ body
   color $textColor
 .page
   padding-left $sidebarWidth
-.sidebar-mask
-  position fixed
-  z-index 9
-  top 0
-  left 0
-  width 100vw
-  height 100vh
-  display none
-.sidebar
-  font-size 16px
-  background-color #fff
-  width $sidebarWidth
-  position fixed
-  z-index 10
-  margin 0
-  top $navbarHeight
-  left 0
-  bottom 0
-  box-sizing border-box
-  border-right 1px solid $borderColor
-  overflow-y auto
+
 {$contentClass}:not(.custom)
   @extend $wrapper
-  > *:first-child
+  > .content__default
     margin-top $navbarHeight
   a:hover
     text-decoration underline
@@ -133,6 +113,12 @@ tr
 th, td
   border 1px solid #dfe2e5
   padding 0.6em 1em
+
+.singleText
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+
 .theme-container
   &.sidebar-open
     .sidebar-mask
@@ -143,10 +129,7 @@ th, td
       padding-top 0
     .sidebar
       top 0
-.singleText
-  overflow hidden
-  text-overflow ellipsis
-  white-space nowrap
+
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar
     .sidebar

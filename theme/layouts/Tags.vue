@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-blog-content tagsPage">
+  <div class="tagsPage">
     <TagList />
   </div>
 </template>

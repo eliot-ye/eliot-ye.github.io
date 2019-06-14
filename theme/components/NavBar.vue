@@ -4,16 +4,13 @@
     <div class="links">
       <nav>
         <div class="nav-item">
-          <router-link :class="{'router-active': $route.meta.id === 'technology'}" to="/">技术</router-link>
+          <router-link :class="{'router-active': id === 'technology'}" to="/">技术</router-link>
         </div>
         <div class="nav-item">
           <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
         </div>
         <div class="nav-item">
-          <router-link 
-            :class="{'router-active': path === '/poetry/2018/11/19/诗词/'}"
-            to="/poetry/2018/11/19/诗词/"
-          >诗词</router-link>
+          <router-link :class="{'router-active': id === 'poetry'}" to="/poetry/2018/11/19/诗词/">诗词</router-link>
         </div>
       </nav>
     </div>
@@ -22,13 +19,16 @@
 
 <script>
 export default {
-  name:"navbar",
-  computed:{
+  name: "navbar",
+  computed: {
+    id() {
+      return this.$route.meta.id || this.$page.id;
+    },
     path() {
       return this.$route.path;
     }
   }
-}
+};
 </script>
 
 
@@ -43,7 +43,7 @@ export default {
   background-color #fff
   box-sizing border-box
   border-bottom 1px solid $borderColor
-  padding .7rem 1.5rem
+  padding 0.7rem 1.5rem
   line-height 2.2rem
   .site-title
     font-size 1.3rem
@@ -53,10 +53,10 @@ export default {
     box-sizing border-box
     background-color #fff
     white-space nowrap
-    font-size .9rem
+    font-size 0.9rem
     position absolute
     right 1.5rem
-    top .7rem
+    top 0.7rem
     display flex
     .nav-item
       position relative

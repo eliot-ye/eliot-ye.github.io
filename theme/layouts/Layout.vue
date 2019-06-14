@@ -1,17 +1,20 @@
 <template>
-  <div class="theme-blog-content Layout">
+  <div id="Layout">
     <CatalogueList/>
+    <About/>
     <!-- <PaginationButton/> -->
   </div>
 </template>
 
 <script>
+import About from "../components/About.vue";
 import CatalogueList from "../components/CatalogueList";
 // import PaginationButton from "../components/PaginationButton";
 export default {
   name: "Layout",
   components: {
-    CatalogueList,
+    About,
+    CatalogueList
     // PaginationButton
   }
 };
@@ -19,6 +22,10 @@ export default {
 
 
 <style lang="stylus">
-.theme-blog-content.Layout
-  max-width 600px
+@import '../styles/config'
+
+#Layout
+  max-width $catalogueWidth
+  margin 0 auto
+  padding-top $navbarHeight
 </style>

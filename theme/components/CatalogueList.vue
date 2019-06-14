@@ -5,7 +5,7 @@
         <router-link :to="page.path">{{ page.title }}</router-link>
       </h3>
       <p class="singleText">
-        <span v-for="(header,index) in page.headers" :key="index">{{`${index}. ${header.title} `}}</span>
+        <span v-for="(header,index) in page.headers" :key="index">{{`${index + 1}. ${header.title} `}}</span>
       </p>
       <div class="tags">
         <router-link v-for="tag in page.frontmatter.tags" :key="tag" :to="`/tag/${tag}/`">
@@ -21,12 +21,14 @@
 #catalogue-list
   list-style none
   padding 0
+  margin-top $navbarHeight
   .catalogue-item
     padding 0.8rem 1.5rem
-    border 1px solid $borderColor
-    border-radius 3px
-    box-shadow 0 0 3px $borderColor
-    margin-bottom 10px
+    border-radius 5px
+    box-shadow 0 0 3px $arrowBgColor
+    margin-bottom 30px
+    &:hover
+      box-shadow 0 0 3px $accentColor
     .catalogue-link
       margin 0
       margin-bottom 10px

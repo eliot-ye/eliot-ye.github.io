@@ -14,7 +14,7 @@ module.exports = {
         {
           id: 'poetry',
           dirname: 'poetry',
-          path: '/poetry',
+          path: '/poetry/',
           itemLayout: 'BlogContent',
         },
       ],
@@ -48,6 +48,8 @@ module.exports = {
         '/zh/': '警告'
       }
     }],
+    '@vuepress/active-header-links',
+    '@vuepress/last-updated',
     '@vuepress/back-to-top',
     '@vuepress/nprogress'
   ] 

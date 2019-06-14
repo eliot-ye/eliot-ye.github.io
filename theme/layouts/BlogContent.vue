@@ -1,5 +1,42 @@
 <template>
+<div id="BlogContent">
   <div class="theme-blog-content">
     <Content/>
+    <Outline/>
+    <footer id="BlogContent-footer">
+      <div id="last-updated">
+        <span class="prefix">上次更新:</span>
+        <span class="time">{{$page.lastUpdated}}</span>
+      </div>
+      <div style="clear: both"></div>
+    </footer>
   </div>
+</div>
 </template>
+
+<script>
+import Outline from "../components/Outline.vue";
+export default {
+  components: {
+    Outline
+  }
+};
+</script>
+
+<style lang="stylus">
+@import '../styles/config'
+
+#BlogContent
+  padding-right $sidebarWidth * 0.8
+#BlogContent-footer
+  padding-top 50px
+  padding-bottom 20px
+#last-updated
+  float right
+  font-size 0.9em
+  .time
+    color #aaa
+@media (max-width: $MQNarrow)
+  #BlogContent
+    padding-right 0
+</style>

@@ -1,10 +1,11 @@
 {
-  "name": "blog-theme",
+  "name": "blog",
   "version": "0.0.1",
-  "description": "blog-theme",
+  "description": "Eliot's blog",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-blog": "^1.0.0",
     "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
@@ -15,6 +16,6 @@
     "start": "vuepress dev src",
     "build": "vuepress build src"
   },
-  "author": "",
+  "author": "Eliot Ye",
   "license": "ISC"
 }
