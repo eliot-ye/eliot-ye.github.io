@@ -61,7 +61,8 @@ module.exports = (themeConfig, ctx) => {
     '@vuepress/active-header-links',
     '@vuepress/last-updated',
     '@vuepress/back-to-top',
-    '@vuepress/nprogress'
+    '@vuepress/nprogress',
+    ['@vuepress/search',{searchMaxSuggestions: 10}]
   ];
 
   return { plugins };
