@@ -1,7 +1,7 @@
 <template>
   <div id="Layout">
-    <CatalogueList/>
     <About/>
+    <CatalogueList/>
     <!-- <PaginationButton/> -->
   </div>
 </template>
