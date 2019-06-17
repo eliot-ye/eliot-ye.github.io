@@ -156,11 +156,11 @@ export default {
     transition transform 0.2s ease
     overflow-y auto
     &.slideBarShow
-      transform translateX(0)
+      transform none
     #about
       display block
       position relative
-      transform translateX(0)
+      transform none
       top 0
       left 0
       width @width
