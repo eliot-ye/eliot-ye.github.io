@@ -6,14 +6,26 @@ module.exports = {
   locales: { "/": { lang: 'zh-CN' } },
   dest: "dist",
   themeConfig: {
-    portrait: "", // 头像
+    about: {
+      portrait: "", // 头像
+      msgList:[
+        {
+          text:"GitHub",
+          path:"https://github.com/eliot-ye"
+        },
+        {
+          text:"Gitee",
+          path:"https://gitee.com/eliot-ye/blog"
+        }
+      ]
+    },
     directories: [
       {
         dirname: 'technology',
         path: '/'
       },
       {
-        dirname: 'poetry' // 必填
+        dirname: 'others' // 必填
       },
     ],
     navbar:[
@@ -24,10 +36,9 @@ module.exports = {
       },
       {
         title: "诗词",
-        path: "/poetry/2018/11/19/诗词/",
-        id: "poetry"
+        path: "/others/2018/11/19/诗词/",
+        id: "others"
       }
-    ],
-    tag: {}
+    ]
   }
 }

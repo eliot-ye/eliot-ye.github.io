@@ -1,6 +1,6 @@
 <template>
   <header class="navbar">
-    <span class="site-title">{{$siteTitle}}</span>
+    <router-link class="site-title" to="/">{{$siteTitle}}</router-link>
     <div class="links">
       <nav>
         <div class="nav-item">
@@ -51,6 +51,7 @@ export default {
   .site-title
     font-size 1.3rem
     font-weight 600
+    color $textColor !important
   .links
     padding-left 1.5rem
     box-sizing border-box
