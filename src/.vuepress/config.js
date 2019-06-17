@@ -27,6 +27,7 @@ module.exports = {
         path: "/poetry/2018/11/19/诗词/",
         id: "poetry"
       }
-    ]
+    ],
+    tag: {}
   }
 }
