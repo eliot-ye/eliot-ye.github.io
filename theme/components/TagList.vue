@@ -7,7 +7,7 @@
 </template>
 
 <style lang="stylus">
-.tagsList
+.tagsList.content
   padding 0 10px
   .tag
     font-size 1rem
