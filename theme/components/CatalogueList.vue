@@ -18,9 +18,11 @@
 </template>
 
 <style lang="stylus">
+@import "../styles/config";
+  
 #catalogue-list
   list-style none
-  padding 0
+  padding 0 10px
   margin-top $navbarHeight
   .catalogue-item
     padding 0.8rem 1.5rem
@@ -38,4 +40,10 @@
       color #999
     .tags
       float right
+.tagsPage
+  #catalogue-list
+    margin-top ($navbarHeight / 2)
+@media (max-width: $MQNarrow)
+  #catalogue-list
+    margin-top ($navbarHeight / 2)
 </style>

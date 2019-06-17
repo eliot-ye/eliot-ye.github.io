@@ -8,6 +8,7 @@
 
 <style lang="stylus">
 .tagsList
+  padding 0 10px
   .tag
     font-size 1rem
     padding 5px 10px

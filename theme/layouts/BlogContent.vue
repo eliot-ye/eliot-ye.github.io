@@ -37,6 +37,6 @@ export default {
   .time
     color #aaa
 @media (max-width: $MQNarrow)
-  #BlogContent
+  #BlogContent.hasHeaders
     padding-right 0
 </style>

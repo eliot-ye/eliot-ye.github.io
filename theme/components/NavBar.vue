@@ -7,7 +7,10 @@
           <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
         </div>
         <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i">
-          <router-link :class="{'router-active': id === navbar.id}" :to="navbar.path">{{navbar.title}}</router-link>
+          <router-link 
+            :class="{'router-active': id === navbar.id}"
+            :to="navbar.path ? navbar.path : `/${navbar.id}/`"
+          >{{navbar.title}}</router-link>
         </div>
       </nav>
     </div>

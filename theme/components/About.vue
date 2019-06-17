@@ -23,11 +23,14 @@ export default {
   position fixed
   top $navbarHeight * 2
   left 50%
-  transform translateX(-270%)
+  transform translateX(-260%)
   border-radius 5px
   overflow hidden
   border 1px solid $arrowBgColor
   .portrait
     width @width
     height @width
+@media (max-width: $MQNarrow)
+  #about
+    display none
 </style>
