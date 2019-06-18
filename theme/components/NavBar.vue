@@ -92,6 +92,7 @@ export default {
   background-color #fff
   box-sizing border-box
   border-bottom 1px solid $borderColor
+  box-shadow 0 2px 8px $borderColor
   padding 0.7rem 1.5rem
   line-height 2.2rem
   .site-title

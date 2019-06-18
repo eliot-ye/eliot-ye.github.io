@@ -14,7 +14,7 @@ module.exports = {
         },
         {
           text:"Gitee",
-          path:"https://gitee.com/eliot-ye/blog"
+          path:"https://gitee.com/eliot-ye/eliot-ye"
         }
       ]
     },
