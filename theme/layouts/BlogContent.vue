@@ -1,17 +1,17 @@
 <template>
-<div id="BlogContent" :class="{'hasHeaders':$page.headers}">
-  <div class="theme-blog-content">
-    <Content/>
-    <Outline/>
-    <footer id="BlogContent-footer">
-      <div id="last-updated" v-if="$page.lastUpdated">
-        <span class="prefix">上次更新:</span>
-        <span class="time">{{$page.lastUpdated}}</span>
-      </div>
-      <div style="clear: both"></div>
-    </footer>
+  <div id="BlogContent" :class="{'hasHeaders':$page.headers}">
+    <div class="theme-blog-content">
+      <Content/>
+      <Outline/>
+      <footer id="BlogContent-footer">
+        <div id="last-updated" v-if="$page.lastUpdated">
+          <span class="prefix">{{$themeConfig.lastUpdated || "上次更新："}}</span>
+          <span class="time">{{$page.lastUpdated}}</span>
+        </div>
+        <div style="clear: both"></div>
+      </footer>
+    </div>
   </div>
-</div>
 </template>
 
 <script>

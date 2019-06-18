@@ -16,7 +16,6 @@
     </div>
     <router-link class="site-title" to="/">{{$siteTitle}}</router-link>
     <div class="links">
-      <SearchBox/>
       <nav class="nav">
         <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i">
           <router-link
@@ -28,6 +27,7 @@
           <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
         </div>
       </nav>
+      <SearchBox/>
     </div>
     <div id="slideBar-semitransparent" v-show="slideBarShow" @click="slideBarShow = false"></div>
     <div id="slideBar" :class="{'slideBarShow':slideBarShow}">
@@ -35,7 +35,12 @@
       <div class="nav-item" @click="slideBarShow = false">
         <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
       </div>
-      <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i" @click="slideBarShow = false">
+      <div
+        class="nav-item"
+        v-for="(navbar, i) in navbarList"
+        :key="i"
+        @click="slideBarShow = false"
+      >
         <router-link
           :class="{'router-active': id === navbar.id}"
           :to="navbar.path ? navbar.path : `/${navbar.id}/`"
@@ -112,6 +117,9 @@ export default {
       margin-left 0
     a:not(.router-active)
       color $textColor
+  .search-box
+    margin-left 1rem
+    margin-right 0
   .sidebar-button
     cursor pointer
     display none
@@ -126,7 +134,7 @@ export default {
       height 1.25rem
       display block
 @media (min-width: $MQNarrow)
-  #slideBar,#slideBar-semitransparent
+  #slideBar, #slideBar-semitransparent
     display none !important
 @media (max-width: $MQNarrow)
   #navbar

@@ -15,7 +15,7 @@
       <span v-if="msg.icon" :class="msg.icon" class="about-msg"></span>
       <span v-if="msg.text" class="about-msg">{{msg.text}}</span>
       <svg
-        v-if="msg.path && msg.path.indexOf('http') > -1"
+        v-if="msg.path && msg.path.indexOf('http') === 0"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         x="0px"
@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     go(path) {
-      if (path.indexOf("http") > -1) {
+      if (path.indexOf("http") === 0) {
         window.open(path);
       } else {
         this.$router.push(path);
