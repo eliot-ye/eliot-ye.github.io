@@ -28,7 +28,7 @@ export class AntiShake {
   /**
    * @public
    * @param {Function} callback - 要做防抖处理的执行动作
-   * @param {number} time - 防抖动的时间，单位：毫秒
+   * @param {number} [time] - 防抖动的时间，单位：毫秒
    */
   handle(callback, time) {
     if (this.theTimeOut) clearTimeout(this.theTimeOut);
