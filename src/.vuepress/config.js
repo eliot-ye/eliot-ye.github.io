@@ -4,17 +4,18 @@ module.exports = {
   description: "Eliot's blog",
   locales: { "/": { lang: 'zh-CN' } },
   dest: "dist",
+  shouldPrefetch: () => false,
   themeConfig: {
     about: {
       portrait: "/portrait.jpg", // 头像
-      msgList:[
+      msgList: [
         {
-          text:"GitHub",
-          path:"https://github.com/eliot-ye"
+          text: "GitHub",
+          path: "https://github.com/eliot-ye"
         },
         {
-          text:"Gitee",
-          path:"https://gitee.com/eliot-ye/eliot-ye"
+          text: "Gitee",
+          path: "https://gitee.com/eliot-ye/eliot-ye"
         }
       ]
     },
@@ -27,11 +28,11 @@ module.exports = {
         dirname: 'others' // 必填
       },
     ],
-    navbar:[
+    navbar: [
       {
         title: "技术",
         path: "/",
-        id:"technology"
+        id: "technology"
       },
       {
         title: "诗词",
