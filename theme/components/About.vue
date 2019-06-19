@@ -1,14 +1,13 @@
 <template>
   <div id="about" v-if="$themeConfig.about">
-    <div class="portrait">
-
-    <img :src="portrait" alt="portrait" class="portrait-img">
+    <div class="portrait" v-if="about.portrait">
+      <img :src="about.portrait" alt="portrait" class="portrait-img">
     </div>
     <div
       v-for="(msg,i) in msgList"
       :key="i"
       class="about-item"
-      :class="{'is-link':msg.path}"
+      :class="{'is-link':msg.path, 'no-portrait':!about.portrait}"
       @click="go(msg.path)"
     >
       <img v-if="msg.img" :src="msg.img" class="about-msg about-img">
@@ -39,14 +38,10 @@
 </template>
 
 <script>
-const portrait = require("../img/hero.png");
 export default {
   computed: {
     about() {
       return this.$themeConfig.about || {};
-    },
-    portrait() {
-      return this.about.portrait || portrait;
     },
     msgList() {
       return this.about.msgList;
@@ -78,13 +73,15 @@ export default {
   border 1px solid $arrowBgColor
   .portrait-img
     width @width
-    height @width
+    display flex
   .about-item
     display flex
     align-items center
     justify-content center
     height 50px
     border-top 1px solid $arrowBgColor
+    &.no-portrait:nth-of-type(1)
+      border-top none
     .about-img
       height @height * 0.6
     &.is-link

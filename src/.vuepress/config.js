@@ -6,7 +6,7 @@ module.exports = {
   dest: "dist",
   themeConfig: {
     about: {
-      portrait: "", // 头像
+      portrait: "/portrait.jpg", // 头像
       msgList:[
         {
           text:"GitHub",
