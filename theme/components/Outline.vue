@@ -1,7 +1,7 @@
 <template>
   <div id="Outline" v-if="headers">
     <h4 class="Outline-title">目录</h4>
-    <ul class="sidebar">
+    <ul class="sidebar" ref="sidebar">
       <router-link v-for="(item, i) in headers" :to="`#${item.slug}`" class="sidebar-link">
         <li class="Outline-item">{{item.title}}</li>
       </router-link>
@@ -11,11 +11,48 @@
 </template>
 
 <script>
+import { AntiShake } from "../tools/utils.js";
+let AntiShakeObj = new AntiShake(300);
+let sidebarEl = null;
+let sidebarObj = {
+  clientHeight: 0,
+  scrollHeight: 0
+};
 export default {
   name: "Outline",
   computed: {
     headers() {
-      return this.$page.headers && this.$page.headers.filter(item => item.level === 2);
+      return (
+        this.$page.headers &&
+        this.$page.headers.filter(item => item.level === 2)
+      );
+    }
+  },
+  mounted() {
+    sidebarEl = this.$refs.sidebar;
+    sidebarObj.clientHeight = sidebarEl.clientHeight;
+    sidebarObj.scrollHeight = sidebarEl.scrollHeight;
+    if (sidebarObj.clientHeight < sidebarObj.scrollHeight) {
+      window.addEventListener("scroll", this.onScroll);
+      this.$once("hook:beforeDestroy", function() {
+        window.removeEventListener("scroll", this.onScroll);
+        AntiShakeObj = null;
+        sidebarEl = null;
+        sidebarObj = null;
+      });
+    }
+  },
+  methods: {
+    onScroll() {
+      AntiShakeObj.handle(() => {
+        const activeLink =
+          document.querySelector(
+            "#Outline .sidebar .router-link-exact-active .Outline-item"
+          ) || {};
+        const scrollTop =
+          activeLink.offsetTop - 60 - sidebarObj.clientHeight / 2;
+        sidebarEl.scrollTop = scrollTop;
+      });
     }
   }
 };
@@ -24,8 +61,8 @@ export default {
 <style lang="stylus">
 @import '../styles/config'
 
-$titleHeight = 60px;
-$OutlineTop = 25vh;
+$titleHeight = 60px
+$OutlineTop = 25vh
 #Outline
   width $sidebarWidth
   position fixed
@@ -39,7 +76,7 @@ $OutlineTop = 25vh;
     height $titleHeight
     line-height $titleHeight
   .sidebar
-    max-height s('calc(%s - %s)',100vh - $OutlineTop, $titleHeight)
+    max-height s('calc(%s - %s)', 100vh - $OutlineTop, $titleHeight)
     margin 0
     padding 0
     list-style none
