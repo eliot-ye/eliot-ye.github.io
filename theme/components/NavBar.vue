@@ -19,9 +19,14 @@
       <nav class="nav">
         <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i">
           <router-link
+            v-if="navbar.path.indexOf('http') !== 0"
             :class="{'router-active': id === navbar.id}"
             :to="navbar.path ? navbar.path : `/${navbar.id}/`"
           >{{navbar.title}}</router-link>
+          <a v-else :href="navbar.path" target="_blank">
+            {{navbar.title}}
+            <OutLinkIcon :path="navbar.path"/>
+          </a>
         </div>
         <div class="nav-item">
           <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
@@ -35,16 +40,17 @@
       <div class="nav-item" @click="slideBarShow = false">
         <router-link :class="{'router-active': path.indexOf('/tag/') > -1 }" to="/tag/">Tags</router-link>
       </div>
-      <div
-        class="nav-item"
-        v-for="(navbar, i) in navbarList"
-        :key="i"
-        @click="slideBarShow = false"
-      >
+      <div class="nav-item" v-for="(navbar, i) in navbarList" :key="i">
         <router-link
+          v-if="navbar.path.indexOf('http') !== 0"
           :class="{'router-active': id === navbar.id}"
           :to="navbar.path ? navbar.path : `/${navbar.id}/`"
+          @click.native="slideBarShow = false"
         >{{navbar.title}}</router-link>
+        <a v-else :href="navbar.path" target="_blank">
+          {{navbar.title}}
+          <OutLinkIcon :path="navbar.path"/>
+        </a>
       </div>
     </div>
   </header>
@@ -52,11 +58,13 @@
 
 <script>
 import SearchBox from "@SearchBox";
-import About from "../components/About.vue";
+import OutLinkIcon from "./OutLinkIcon";
+import About from "./About";
 export default {
   name: "navbar",
   components: {
     SearchBox,
+    OutLinkIcon,
     About
   },
   data() {
@@ -118,6 +126,10 @@ export default {
       margin-left 0
     a:not(.router-active)
       color $textColor
+    .OutLinkIcon
+      position relative
+      top 3px
+      left 3px
   .search-box
     margin-left 1rem
     margin-right 0
