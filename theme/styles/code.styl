@@ -1,3 +1,4 @@
+@require './config'
 {$contentClass}
   code
     color lighten($textColor, 20%)
@@ -94,12 +95,15 @@ div[class*='language-']
       border-radius 6px 0 0 6px
       border-right 1px solid rgba(0, 0, 0, 66%)
       background-color $codeBgColor
+
 for lang in $codeLang
   div{'[class~="language-' + lang + '"]'}
     &:before
       content '' + lang
 div[class~='language-javascript']:before
   content 'js'
+div[class~='language-json']:before
+  content 'json'
 div[class~='language-typescript']:before
   content 'ts'
 div[class~='language-markup']:before
