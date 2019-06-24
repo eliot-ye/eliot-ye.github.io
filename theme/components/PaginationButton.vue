@@ -17,6 +17,7 @@
 #pagination
   display flex
   justify-content center
+  padding-bottom 80px
   .pagination-btn
     background $accentColor
     color #ffffff
