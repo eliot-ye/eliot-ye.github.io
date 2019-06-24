@@ -1,21 +1,16 @@
 {
   "name": "blog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Eliot's blog",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@vuepress/plugin-active-header-links": "^1.0.2",
-    "@vuepress/plugin-back-to-top": "^1.0.2",
-    "@vuepress/plugin-blog": "^1.0.4",
-    "@vuepress/plugin-nprogress": "^1.0.2",
-    "@vuepress/plugin-search": "^1.0.2",
     "vuepress": "^1.0.2",
-    "vuepress-plugin-container": "^2.0.1"
+    "vuepress-theme-blog-official-style": "git+ssh://git@github.com/eliot-ye/vuepress-theme-blog-official-style.git"
   },
   "scripts": {
-    "start": "vuepress dev src",
-    "build": "vuepress build src"
+    "start": "vuepress dev",
+    "build": "vuepress build"
   },
   "author": "Eliot Ye",
   "license": "ISC"

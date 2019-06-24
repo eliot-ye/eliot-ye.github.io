@@ -1,5 +1,5 @@
 module.exports = {
-  theme: require.resolve('../../theme/'),
+  theme: "blog-official-style",
   title: "Eliot's blog",
   description: "Eliot's blog",
   locales: { "/": { lang: 'zh-CN' } },
