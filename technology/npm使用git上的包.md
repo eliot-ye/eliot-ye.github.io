@@ -28,3 +28,9 @@ npm i https://github.com/eliot-ye/vuepress-theme-blog-official-style.git -S
   "vuepress-theme-blog-official-style": "git+ssh://git@github.com/eliot-ye/vuepress-theme-blog-official-style.git"
 }
 ```
+
+## 更新
+
+```bash
+npm update
+```
