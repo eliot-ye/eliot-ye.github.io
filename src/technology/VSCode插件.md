@@ -1,5 +1,5 @@
 ---
-permalink: 2018/08/03/VSCode插件
+date: 2018/08/03
 tags:
   - 编辑器
   - VSCode

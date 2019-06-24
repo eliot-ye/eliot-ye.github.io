@@ -1,5 +1,5 @@
 ---
-permalink: 2018/08/02/scss的安装使用
+date: 2018/08/02
 tags: 
   - scss
 ---

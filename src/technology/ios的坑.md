@@ -1,5 +1,5 @@
 ---
-permalink: 2018/08/24/ios的坑
+date: 2018/08/24
 tags:
  - js
  - css

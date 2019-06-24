@@ -1,5 +1,5 @@
 ---
-permalink: 2019/04/09/css 文字溢出处理
+date: 2019/04/09
 tags:
   - css
 ---
