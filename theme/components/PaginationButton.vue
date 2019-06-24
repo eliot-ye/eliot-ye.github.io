@@ -4,8 +4,8 @@
       class="pagination-btn"
       :disabled="!$pagination.hasPrev"
       @click="$router.push($pagination.prevLink)"
-    >上一页</button>
-    <div class="pagination-btn pagination-more" v-if="preMore">...</div>
+    >{{paginationText.prevText}}</button>
+    <div class="pagination-btn pagination-more" v-if="prevMore">...</div>
     <button
       class="pagination-btn"
       v-for="i in $pagination.length"
@@ -18,7 +18,7 @@
       class="pagination-btn"
       :disabled="!$pagination.hasNext"
       @click="$router.push($pagination.nextLink)"
-    >下一页</button>
+    >{{paginationText.nextText}}</button>
   </div>
 </template>
 
@@ -26,13 +26,20 @@
 const btnShowNum = 9;
 export default {
   computed: {
+    paginationText(){
+      const paginationText = this.$themeConfig.paginationText || {};
+      return {
+        prevText: paginationText.prevText || "上一页",
+        nextText: paginationText.nextText || "下一页"
+      }
+    },
     paginationNum() {
       return this.$pagination.paginationIndex + 1;
     },
     twoFlanksNum() {
       return (btnShowNum + 1) / 2;
     },
-    preMore() {
+    prevMore() {
       return this.paginationNum > this.twoFlanksNum;
     },
     nextMore() {
@@ -43,9 +50,9 @@ export default {
   },
   methods: {
     paginationBtnShow(i) {
-      if (!this.preMore) {
+      if (!this.prevMore) {
         return i <= btnShowNum;
-      } else if (this.preMore && this.nextMore) {
+      } else if (this.prevMore && this.nextMore) {
         return (
           (i > this.paginationNum - this.twoFlanksNum &&
             i <= this.paginationNum) ||
@@ -62,6 +69,8 @@ export default {
 
 
 <style lang="stylus">
+@import '../styles/config'
+
 $borderRadius = 5px
 #pagination
   display flex
@@ -92,7 +101,7 @@ $borderRadius = 5px
       color $textColor
     &.pagination-btn-active
       background $accentColor
-      color #fff
+      color $activeTextColor
       cursor default
     &:disabled
       background $borderColor
