@@ -4,7 +4,7 @@ module.exports = {
   description: "Eliot's blog",
   locales: { "/": { lang: "zh-CN" } },
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }]
+    ["link", { rel: "shortcut icon", href: "/favicon.ico" }]
   ],
   dest: "dist",
   shouldPrefetch: () => false,
