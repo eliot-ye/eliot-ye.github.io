@@ -36,8 +36,8 @@ module.exports = {
       },
       {
         title: "诗词",
-        path: "/others/2018/11/19/诗词/",
-        id: "others"
+        path: "/others/诗词/",
+        id: "/others/诗词/"
       }
     ]
   }
