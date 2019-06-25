@@ -4,7 +4,7 @@ module.exports = {
   description: "Eliot's blog",
   locales: { "/": { lang: "zh-CN" } },
   head: [
-    ["link", { rel: "shortcut icon", href: "/favicon.ico" }]
+    ["link", { rel: "shortcut icon", href: "https://eliot-ye.gitee.io/favicon.ico" }]
   ],
   dest: "dist",
   shouldPrefetch: () => false,
