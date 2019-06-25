@@ -2,7 +2,10 @@ module.exports = {
   theme: "blog-official-style",
   title: "Eliot's blog",
   description: "Eliot's blog",
-  locales: { "/": { lang: 'zh-CN' } },
+  locales: { "/": { lang: "zh-CN" } },
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }]
+  ],
   dest: "dist",
   shouldPrefetch: () => false,
   themeConfig: {
