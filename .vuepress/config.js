@@ -42,7 +42,6 @@ module.exports = {
         path: "/others/诗词/",
         id: "/others/诗词/"
       }
-    ],
-    pwa: true
+    ]
   }
 }
