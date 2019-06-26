@@ -42,6 +42,12 @@ module.exports = {
         path: "/others/诗词/",
         id: "/others/诗词/"
       }
-    ]
+    ],
+    comment:{
+      owner:"eliot-ye",
+      repo:"blog",
+      clientId:"d9eab930f0aef97f59327664f230583ff98ef294d8ba6d5f39873d620b2470c0",
+      clientSecret:"c89fa21046cb358765a804e6c1bfada7bed2caced1064d5b9a2e237035e144a8"
+    }
   }
 }
