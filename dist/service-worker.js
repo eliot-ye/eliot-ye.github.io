@@ -27,59 +27,59 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "2018/08/02/scss的安装使用/index.html",
-    "revision": "097369b02e53bc82966797c8fc55bf13"
+    "revision": "c8cc01d7da0fb83ffe1cd74e99489e33"
   },
   {
     "url": "2018/08/03/vscode插件/index.html",
-    "revision": "237dea20cb0e93a6afe5ba59e3c0f68e"
+    "revision": "9d9ade58d941aae398e216b80b89eefd"
   },
   {
     "url": "2018/08/05/关于checkbox的展示应用/index.html",
-    "revision": "625172c63557233a89eabd76c6e7d62d"
+    "revision": "68830a9927417e8e85ae4913898952be"
   },
   {
     "url": "2018/08/08/数组的排序/index.html",
-    "revision": "e4ebcba00dbe0f09f74ebf91146a93b2"
+    "revision": "13952e8e1f919a9c197e9d39793bdd5f"
   },
   {
     "url": "2018/08/21/关于内存泄漏/index.html",
-    "revision": "4d39d2a814ac2719f827c05047ee60db"
+    "revision": "08e1c2460171e7cc4626fba396c3326e"
   },
   {
     "url": "2018/08/22/包管理工具/index.html",
-    "revision": "635968ad65dd13941937e82cdc34c283"
+    "revision": "a5a04b9c7723cafddaa86c98bc5384fe"
   },
   {
     "url": "2018/08/23/js插件封装/index.html",
-    "revision": "3dcd44068ce706d0236c1ebf1e1f2323"
+    "revision": "6271c068c3358df582a99d0a6845cfbe"
   },
   {
     "url": "2018/08/24/ios的坑/index.html",
-    "revision": "fe6515fb004549f02461bbf0abffd881"
+    "revision": "66a26902ec4debe4e6b7f2dfbd63f0d5"
   },
   {
     "url": "2018/11/30/前端面试201811/index.html",
-    "revision": "0fc39778445eeb3eb4e466f5a0cb711a"
+    "revision": "7288a0aa8c95d242603a6e3e85e9c3c7"
   },
   {
     "url": "2019/04/09/css文字溢出处理/index.html",
-    "revision": "b2cfb5ee1bddb6dfb45ae4dcea2d2c36"
+    "revision": "c057da1d933794e3648d339a333375ec"
   },
   {
     "url": "2019/04/26/格式化数字/index.html",
-    "revision": "8758c39f0c48dc76b909e0b249266e72"
+    "revision": "7b282f5ceb637e078b12a34c6b9bfed3"
   },
   {
     "url": "2019/06/03/js防抖动功能/index.html",
-    "revision": "237be028d7a8866026a9a9328cff759d"
+    "revision": "e99d90e182ea9924116207d81bfe3342"
   },
   {
     "url": "2019/06/24/npm使用git上的包/index.html",
-    "revision": "7b69003dbc6d51fc6ec05a37805bae01"
+    "revision": "f80c3db4cc5c89128fd44710c84bc188"
   },
   {
     "url": "404.html",
-    "revision": "493bfd2d9ab9ac57d3bf1be77207d97f"
+    "revision": "1a849387885ad69f4362f6e676d88a70"
   },
   {
     "url": "assets/css/0.styles.a54d6d16.css",
@@ -110,52 +110,52 @@ self.__precacheManifest = [
     "revision": "0b92aa53d31d8a417d42b8e828b1b1c5"
   },
   {
-    "url": "assets/js/12.c41a551d.js",
-    "revision": "e3870f4d1c1b27856c51a2ff4c4322a3"
+    "url": "assets/js/12.b586eb2f.js",
+    "revision": "da2fa8969bc6ae3aae02a83bd997fc4d"
   },
   {
-    "url": "assets/js/13.0dfc305e.js",
-    "revision": "24d9d9a6784c8bc8e50db9f7031d3d53"
+    "url": "assets/js/13.378729df.js",
+    "revision": "a50a320d4c4d23122757387f4a2e7cd4"
   },
   {
-    "url": "assets/js/14.7f79baac.js",
-    "revision": "f914e4e5461c4dcf108662c46de02ba6"
+    "url": "assets/js/14.8d480c8f.js",
+    "revision": "d4fa40b8e54283c977bcf53ef0177c16"
   },
   {
-    "url": "assets/js/15.34d9a20a.js",
-    "revision": "42446cde65504f9f5c2ab683e67b12e1"
+    "url": "assets/js/15.cdc506ba.js",
+    "revision": "9594635cad440a05cbfea7f517f744ea"
   },
   {
-    "url": "assets/js/16.99514de6.js",
-    "revision": "c4e40b35929990604fdcaeaeb5d17307"
+    "url": "assets/js/16.f1f92ab9.js",
+    "revision": "18e77bb55f092a66ebcd5c5e1dbc1022"
   },
   {
-    "url": "assets/js/17.01217a95.js",
-    "revision": "bd54702e01dc4785d58d592ed6246550"
+    "url": "assets/js/17.fe980e7f.js",
+    "revision": "61b7094bd274f059b0329f03a55267fa"
   },
   {
     "url": "assets/js/18.0b558caa.js",
     "revision": "5bd1b6b2d377545f902a8945a3770b69"
   },
   {
-    "url": "assets/js/19.35db7c4b.js",
-    "revision": "ca280d32d1e0e11e08bf3861fe8e47d3"
+    "url": "assets/js/19.55d6015b.js",
+    "revision": "e9a60522e9bdc89741fe9c3ad949987a"
   },
   {
     "url": "assets/js/2.04275579.js",
     "revision": "204640e28b8aa0e4c1949b70f86f0330"
   },
   {
-    "url": "assets/js/20.ce5fb721.js",
-    "revision": "391b9e0b018c707f105e33bbbba8669c"
+    "url": "assets/js/20.7b4f3bf4.js",
+    "revision": "d01d516c60a1ade32ac2111dab04f055"
   },
   {
-    "url": "assets/js/21.f13c1846.js",
-    "revision": "249d109c15dac9844bec529bf47b108e"
+    "url": "assets/js/21.03af9742.js",
+    "revision": "5b0471b1a1fcc237257f73c8e1e206c5"
   },
   {
-    "url": "assets/js/22.363fb9a6.js",
-    "revision": "1c68694c415b26ff532b5648dc1fe843"
+    "url": "assets/js/22.6446a4ed.js",
+    "revision": "a9b33dbd9a471ebd54cbe2cf296fed50"
   },
   {
     "url": "assets/js/23.8810a25f.js",
@@ -174,8 +174,8 @@ self.__precacheManifest = [
     "revision": "48052125bacb8dcabdb2f0ed35cb1818"
   },
   {
-    "url": "assets/js/6.ac01c95e.js",
-    "revision": "051f25efe6fdbfa65d10610bac2beae0"
+    "url": "assets/js/6.a60043ef.js",
+    "revision": "fe8b66718ba51ce267ba944a28905877"
   },
   {
     "url": "assets/js/7.40629450.js",
@@ -190,28 +190,28 @@ self.__precacheManifest = [
     "revision": "e8e740bb1431e94ae75082d08584c240"
   },
   {
-    "url": "assets/js/app.ac7f00e3.js",
-    "revision": "6bda68215e04fbd021fc83e4482a1939"
+    "url": "assets/js/app.efeb131d.js",
+    "revision": "745089f12082a50e1b269db2729fafd4"
   },
   {
     "url": "index.html",
-    "revision": "1df4ec5c719a4083de4ff64a826bcfb5"
+    "revision": "f1246685773a2941ae84be536d6236f4"
   },
   {
     "url": "others/index.html",
-    "revision": "ec5596bbb0bf72a2b9dc11e8a492515e"
+    "revision": "ccba17f1caa2fc6975211a2230e903d8"
   },
   {
     "url": "others/关于/index.html",
-    "revision": "0e1a3ad7aed55a2b848e5a57e3218be4"
+    "revision": "09fb69402d42caafc926178dda4be5aa"
   },
   {
     "url": "others/诗词/index.html",
-    "revision": "2425198e0a0fb6808e398c25a311d975"
+    "revision": "6d3202e347163fbf91c487daa0ac7262"
   },
   {
     "url": "page/2/index.html",
-    "revision": "4af4563dc0aa7cc0748713d2576b5bfd"
+    "revision": "649812e1cb2e9abe7e3900e6fc1b4d9e"
   },
   {
     "url": "portrait.jpg",
@@ -219,47 +219,47 @@ self.__precacheManifest = [
   },
   {
     "url": "tag/css/index.html",
-    "revision": "65667e9bdd97823a066f6f81f95234eb"
+    "revision": "5c0c13987bb7c4f137fa9a6ea74de107"
   },
   {
     "url": "tag/html/index.html",
-    "revision": "35aa18ea48a6e946c5403bb1fa5c6111"
+    "revision": "5d3ab01d8b3d0424642dfbb5b976c281"
   },
   {
     "url": "tag/index.html",
-    "revision": "347df371198e8d6a90b721c40b313425"
+    "revision": "886e3eddff17e5fa4b66f9b01b8d297b"
   },
   {
     "url": "tag/ios/index.html",
-    "revision": "80bae914248d336bbd46cc0d5897820f"
+    "revision": "9ef50ab74021db9a11d06e76699a4751"
   },
   {
     "url": "tag/js/index.html",
-    "revision": "5134a971a151a1c95bba9013fea18760"
+    "revision": "29a106920fb2ab859870b6e733b78efd"
   },
   {
     "url": "tag/npm/index.html",
-    "revision": "6a82241bc263e09f9fdad672e0bdc237"
+    "revision": "32aadb0e7fa41c5728605fe752f57a2b"
   },
   {
     "url": "tag/scss/index.html",
-    "revision": "1a881c8dc32d15b1a305d4b002f63182"
+    "revision": "8f3692d725f4f68aeb7bc09725411b7f"
   },
   {
     "url": "tag/VSCode/index.html",
-    "revision": "b46c8b1610ec7a7b2f4b6ab6fef6514f"
+    "revision": "4d66b40873c569a86cfc6fa69b12fd62"
   },
   {
     "url": "tag/yarn/index.html",
-    "revision": "43b396336e99b697c3ddb08ba4d3764a"
+    "revision": "d3439e674fe65cb24d301d8c2b424e70"
   },
   {
     "url": "tag/编辑器/index.html",
-    "revision": "1b9263031f6a663013af0ad2cffc86c6"
+    "revision": "7e9d229c215765731c8809af2194fe67"
   },
   {
     "url": "tag/面试/index.html",
-    "revision": "f26d4209f6f94015586a115f04d498dc"
+    "revision": "80a66dc0fedf7d0c98d8ae780342ee3f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
