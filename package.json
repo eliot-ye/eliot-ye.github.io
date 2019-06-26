@@ -4,7 +4,6 @@
   "description": "Eliot's blog",
   "main": "index.js",
   "dependencies": {
-    "@vssue/api-gitee-v5": "^1.0.0",
     "vuepress": "^1.0.2",
     "vuepress-theme-blog-official-style": "git+ssh://git@github.com/eliot-ye/vuepress-theme-blog-official-style.git"
   },
@@ -12,6 +11,5 @@
     "start": "vuepress dev",
     "build": "vuepress build"
   },
-  "author": "Eliot Ye",
-  "license": "ISC"
+  "author": "Eliot Ye"
 }
