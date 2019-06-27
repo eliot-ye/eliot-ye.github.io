@@ -2,6 +2,7 @@
 date: 2018/08/23
 tags:
   - js
+issueId: 7
 ---
 # js插件封装
 

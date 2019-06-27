@@ -3,6 +3,7 @@ date: 2018/08/03
 tags:
   - 编辑器
   - VSCode
+issueId: 2
 ---
 # VSCode 插件
 

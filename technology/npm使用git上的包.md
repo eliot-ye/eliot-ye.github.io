@@ -2,6 +2,7 @@
 date: 2019/06/24
 tags:
   - npm
+issueId: 13
 ---
 
 # npm 使用 git 上的包
