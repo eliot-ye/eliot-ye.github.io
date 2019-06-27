@@ -42,6 +42,12 @@ module.exports = {
         path: "/others/诗词/",
         id: "/others/诗词/"
       }
-    ]
+    ],
+    comment:{
+      owner: "eliot-ye",
+      repo: "eliot-ye.github.io",
+      clientId: "a496810e46e71845f6e6",
+      clientSecret: "b30105f8c8780c1b9f9dda493757a5682c14c74d"
+    }
   }
 }
