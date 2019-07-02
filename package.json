@@ -8,7 +8,7 @@
     "vuepress-theme-blog-official-style": "git+ssh://git@github.com/eliot-ye/vuepress-theme-blog-official-style.git"
   },
   "scripts": {
-    "start": "vuepress dev",
+    "start": "vuepress dev --no-cache",
     "build": "vuepress build"
   },
   "author": "Eliot Ye"
