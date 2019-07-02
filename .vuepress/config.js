@@ -9,6 +9,12 @@ module.exports = {
   dest: "dist",
   shouldPrefetch: () => false,
   themeConfig: {
+    statement:{
+      author: "Eliot Ye",
+      serveUrl: "https://eliot-ye.gitee.io/",
+      copyright: "BY-NC-SA",
+      copyrightUrl: "https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"
+    },
     about: {
       portrait: "/portrait.jpg", // 头像
       msgList: [
