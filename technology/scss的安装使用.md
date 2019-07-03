@@ -12,7 +12,7 @@ issueId: 1
 ## 安装node-sass
 
 ``` bash
-yarn global add node-sass 
+yarn global add node-sass
 # 或者
 npm i node-scss -g
 ```
