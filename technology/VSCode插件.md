@@ -65,20 +65,22 @@ issueId: 2
 - `Live Sass Compiler`:实时编译 `sass`
 
   ```json
-  // VScode 配置文件中配置
-  "liveSassCompile.settings.formats":[
-    {
-      "format": "compressed",// 压缩格式
-      "extensionName": ".min.css",// 编译后缀名
-      "savePath": "./css"// 编译保存的路径
-    }
-  ],
-  "liveSassCompile.settings.autoprefix": [
-    // 自动加前缀的目标浏览器
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  {
+    // VScode 配置文件中配置
+    "liveSassCompile.settings.formats":[
+      {
+        "format": "compressed",// 压缩格式
+        "extensionName": ".min.css",// 编译后缀名
+        "savePath": "./css"// 编译保存的路径
+      }
+    ],
+    "liveSassCompile.settings.autoprefix": [
+      // 自动加前缀的目标浏览器
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 8"
+    ],
+  }
   ```
 
   ![使用](./img/15093281194279.jpg)
@@ -91,12 +93,14 @@ issueId: 2
 - `ESLint`: js 的代码规范性检查，可设置自动格式化
 
   ```json
-  // VScode 配置文件中配置
-  "eslint.autoFixOnSave": true, // 自动格式化
-  "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "vue", "autoFix": true }
-  ],
+  {
+    // VScode 配置文件中配置
+    "eslint.autoFixOnSave": true, // 自动格式化
+    "eslint.validate": [
+      { "language": "javascript", "autoFix": true },
+      { "language": "vue", "autoFix": true }
+    ],
+  }
   ```
 
 - `Visual Studio IntelliCode - Preview`: 微软官方出品的 AI 智能提示插件
@@ -109,7 +113,7 @@ issueId: 2
 
 ## 我的 VSCode 设置
 
-```js
+```json
 {
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.feedback.visible": false,
