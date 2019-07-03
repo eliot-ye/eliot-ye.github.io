@@ -12,7 +12,9 @@ issueId: 1
 ## 安装node-sass
 
 ``` bash
-yarn global add node-sass # 或者： npm i node-scss -g
+yarn global add node-sass 
+# 或者
+npm i node-scss -g
 ```
 
 ## 文件结构
@@ -67,6 +69,6 @@ node-sass -wro css scss --output-style compressed --source-map-embed
 :::tip
 
 事实上，如果用了编辑器，直接用编辑器来编译更加方便，如：
-使用vsCode的话，可以直接下载`Live Sass Compiler`插件，详情见[vsCode插件 -> Live Sass Compiler](201808030VSCode插件.md#live-sass-compiler)
+使用 VSCode 的话，可以直接下载`Live Sass Compiler`插件，详情见[VSCode插件 -> Live Sass Compiler](VSCode插件.md#css)
 
 :::
