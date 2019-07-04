@@ -31,7 +31,10 @@ module.exports = {
     directories: [
       {
         dirname: 'technology',
-        path: '/'
+        path: '/',
+        pagination:{
+          lengthPerPage: 5
+        }
       },
       {
         dirname: 'others' // 必填
