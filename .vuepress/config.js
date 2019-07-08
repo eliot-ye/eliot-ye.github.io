@@ -1,5 +1,4 @@
 module.exports = {
-  theme: "blog-official-style",
   title: "Eliot's blog",
   description: "Eliot's blog",
   locales: { "/": { lang: "zh-CN" } },
@@ -8,8 +7,10 @@ module.exports = {
   ],
   dest: "dist",
   shouldPrefetch: () => false,
+  evergreen: true,
+  theme: "blog-official-style",
   themeConfig: {
-    statement:{
+    statement: {
       author: "Eliot Ye",
       serveUrl: "https://eliot-ye.gitee.io/",
       copyright: "BY-NC-SA",
@@ -32,7 +33,7 @@ module.exports = {
       {
         dirname: 'technology',
         path: '/',
-        pagination:{
+        pagination: {
           lengthPerPage: 5
         }
       },
@@ -52,7 +53,7 @@ module.exports = {
         id: "/others/诗词/"
       }
     ],
-    comment:{
+    comment: {
       owner: "eliot-ye",
       repo: "eliot-ye.github.io",
       clientId: "a496810e46e71845f6e6",
