@@ -58,5 +58,8 @@ module.exports = {
       clientId: "a496810e46e71845f6e6",
       clientSecret: "b30105f8c8780c1b9f9dda493757a5682c14c74d"
     }
-  }
+  },
+  plugins: [
+    require('./plugins/changeVersion.js')
+  ]
 }
