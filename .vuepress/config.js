@@ -1,3 +1,6 @@
+// @ts-check
+const changeVersion = require('./plugins/changeVersion.js')
+
 module.exports = {
   title: "Eliot's blog",
   description: "Eliot's blog",
@@ -8,9 +11,7 @@ module.exports = {
   dest: "dist",
   shouldPrefetch: () => false,
   evergreen: true,
-  plugins: [
-    require('./plugins/changeVersion.js')
-  ],
+  plugins: [ changeVersion ],
   theme: "blog-official-style",
   themeConfig: {
     statement: {
