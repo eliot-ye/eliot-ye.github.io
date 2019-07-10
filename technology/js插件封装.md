@@ -6,11 +6,15 @@ issueId: 7
 ---
 # js插件封装
 
+## 自执行普通模式
+
 ```js
 (function(global){
 
 })(this)
 ```
+
+## UMD模式
 
 ```js
 (function (global, factory) {

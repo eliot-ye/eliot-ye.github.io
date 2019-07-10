@@ -6,6 +6,8 @@ issueId: 10
 ---
 # css 文字溢出处理
 
+## css
+
 ```css
 /* 单行文字溢出 */
 .single-text {
@@ -21,6 +23,8 @@ issueId: 10
   overflow: hidden;
 }
 ```
+
+## scss
 
 ```scss
 // 单行文字溢出
@@ -55,6 +59,8 @@ issueId: 10
   }
 }
 ```
+
+## stylus
 
 ```stylus
 // 单行文字溢出
