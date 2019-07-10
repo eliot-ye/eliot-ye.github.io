@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Eliot's blog",
   "main": "index.js",
   "dependencies": {
