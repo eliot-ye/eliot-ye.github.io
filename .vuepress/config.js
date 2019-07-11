@@ -25,11 +25,11 @@ module.exports = {
       msgList: [
         {
           text: "GitHub",
-          path: "https://github.com/eliot-ye"
+          path: "https://github.com/eliot-ye/"
         },
         {
           text: "Gitee",
-          path: "https://gitee.com/eliot-ye/eliot-ye"
+          path: "https://gitee.com/eliot-ye/"
         }
       ]
     },
