@@ -4,6 +4,7 @@
   "description": "Eliot's blog",
   "author": "Eliot Ye",
   "private": true,
+  "license": "BY-NC-SA",
   "repository": {
     "type": "git",
     "url": "https://gitee.com/eliot-ye/eliot-ye"
