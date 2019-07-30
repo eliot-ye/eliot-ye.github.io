@@ -12,7 +12,7 @@
   "main": "dist/index.html",
   "dependencies": {
     "vuepress": "^1.0.2",
-    "vuepress-theme-blog-official-style": "git+ssh://git@github.com/eliot-ye/vuepress-theme-blog-official-style.git"
+    "vuepress-theme-blog-official-style": "git+ssh://git@gitee.com:eliot-ye/vuepress-theme-blog-official-style.git"
   },
   "scripts": {
     "start": "vuepress dev --no-cache",
