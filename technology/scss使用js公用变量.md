@@ -17,7 +17,7 @@ module.exports = {
 };
 ```
 
-## 使用 stylus-loader 的 `data` 选项
+## 使用 sass-loader 的 `data` 选项
 
 ```js
 const styleConfig = require('/src/assets/config')
