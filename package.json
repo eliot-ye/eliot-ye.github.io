@@ -11,7 +11,7 @@
   },
   "main": "dist/index.html",
   "dependencies": {
-    "vuepress": "^1.1.0",
+    "vuepress": "^1.2.0",
     "vuepress-theme-blog-official-style": "git+ssh://git@gitee.com:eliot-ye/vuepress-theme-blog-official-style.git"
   },
   "scripts": {
