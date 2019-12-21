@@ -62,4 +62,4 @@ emulatorTarget = defaultTarget.name;
 emulatorTarget = defaultTarget && defaultTarget.name;
 ```
 
-以上两个错误都有可能是因为某些环境没安装而导致，例如没安装在pod
+以上两个错误都有可能是因为某些环境没安装而导致，例如没安装pod
