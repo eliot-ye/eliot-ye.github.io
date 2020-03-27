@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "description": "Eliot's blog",
   "author": "Eliot Ye",
   "private": true,
@@ -11,7 +11,7 @@
   },
   "main": "dist/index.html",
   "dependencies": {
-    "vuepress": "^1.2.0",
+    "vuepress": "^1.4.0",
     "vuepress-theme-blog-official-style": "git+ssh://git@gitee.com:eliot-ye/vuepress-theme-blog-official-style.git"
   },
   "scripts": {
