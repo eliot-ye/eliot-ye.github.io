@@ -7677,8 +7677,8 @@ vuepress-plugin-smooth-scroll@^0.0.3:
     smoothscroll-polyfill "^0.4.3"
 
 "vuepress-theme-blog-official-style@https://gitee.com/eliot-ye/vuepress-theme-blog-official-style.git":
-  version "1.1.25"
-  resolved "https://gitee.com/eliot-ye/vuepress-theme-blog-official-style.git#20f3bf0824b8324b785107663bf545192924fd54"
+  version "1.1.26"
+  resolved "https://gitee.com/eliot-ye/vuepress-theme-blog-official-style.git#bbc652e031ee44809c91655fffae1cf1a5c32390"
   dependencies:
     "@vssue/api-github-v3" "^1.4.3"
     "@vssue/vuepress-plugin-vssue" "^1.4.3"
