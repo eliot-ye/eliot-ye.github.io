@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "2.2.19",
+  "version": "2.2.20",
   "description": "Eliot's blog",
   "author": "Eliot Ye",
   "private": true,
@@ -17,5 +17,8 @@
   "scripts": {
     "start": "vuepress dev --no-cache",
     "build": "vuepress build"
+  },
+  "volta": {
+    "node": "14.21.3"
   }
 }
