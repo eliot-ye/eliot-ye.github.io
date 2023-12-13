@@ -21,7 +21,7 @@ module.exports = {
       copyrightUrl: "https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"
     },
     about: {
-      portrait: "/portrait.jpg", // 头像
+      portrait: "/portrait.jpeg", // 头像
       msgList: [
         {
           text: "GitHub",
