@@ -55,7 +55,7 @@ export function invisibleStr(str, start = 0, end = 0) {
 ```js
 /**
  * 深度复制传入的对象，JSON.parse(JSON.stringify(obj));
- * @type {<T>(obj:any)=>T}
+ * @type {<T>(obj:T)=>T}
  */
 export function deepCopy(obj) {
   return JSON.parse(JSON.stringify(obj));
