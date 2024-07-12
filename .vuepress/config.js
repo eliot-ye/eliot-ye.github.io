@@ -16,7 +16,7 @@ module.exports = {
   themeConfig: {
     statement: {
       author: "Eliot Ye",
-      serveUrl: "https://eliot-ye.gitee.io/",
+      serveUrl: "https://eliot-ye.github.io/",
       copyright: "BY-NC-SA",
       copyrightUrl: "https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"
     },
